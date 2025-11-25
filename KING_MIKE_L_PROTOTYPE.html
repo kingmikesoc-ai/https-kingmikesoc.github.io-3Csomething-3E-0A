@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KING MIKE L — CARD AI Prototype</title>
+<style>
+body { background:#0B0B0C; color:#D9D9E0; font-family:Arial, sans-serif; margin:0; padding:20px; }
+button { width:100%; padding:20px; margin:10px 0; font-size:20px; border:none; border-radius:12px; background:#5B00D4; color:white; cursor:pointer; }
+.screen { display:none; }
+.active { display:block; }
+h1 { color:#F5C400; }
+.back { background:#333; }
+</style>
+<script>
+function show(screen){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(screen).classList.add('active');
+}
+</script>
+</head>
+<body>
+
+<div id="home" class="screen active">
+  <h1>KING MIKE L — CARD AI</h1>
+  <button onclick="show('scan')">SCAN CARDS</button>
+  <button onclick="show('price')">AUTO PRICE</button>
+  <button onclick="show('bundle')">AUTO BUNDLES</button>
+  <button onclick="show('listing')">AUTO LISTINGS</button>
+  <button onclick="show('pusher')">UNIVERSAL PUSHER</button>
+  <button onclick="show('king')">KING MODE</button>
+</div>
+
+<div id="scan" class="screen">
+  <h1>SCAN CARDS</h1>
+  <p>This is a prototype screen showing scan behavior.</p>
+  <button class="back" onclick="show('home')">Back</button>
+</div>
+
+<div id="price" class="screen">
+  <h1>AUTO PRICE</h1>
+  <p>The AI updates card prices using live market data.</p>
+  <button class="back" onclick="show('home')">Back</button>
+</div>
+
+<div id="bundle" class="screen">
+  <h1>AUTO BUNDLES</h1>
+  <p>Bundles are automatically generated.</p>
+  <button class="back" onclick="show('home')">Back</button>
+</div>
+
+<div id="listing" class="screen">
+  <h1>AUTO LISTINGS</h1>
+  <p>Listings are built automatically for eBay & Whatnot.</p>
+  <button class="back" onclick="show('home')">Back</button>
+</div>
+
+<div id="pusher" class="screen">
+  <h1>UNIVERSAL PUSHER</h1>
+  <p>Posts your listings to ALL marketplaces.</p>
+  <button class="back" onclick="show('home')">Back</button>
+</div>
+
+<div id="king" class="screen">
+  <h1>KING MODE</h1>
+  <p>One tap automates your entire empire.</p>
+  <button class="back" onclick="show('home')">Back</button>
+</div>
+
+</body>
+</html>
